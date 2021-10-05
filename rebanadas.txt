@@ -1,0 +1,8 @@
+calcularCadena(cadena, delimitador)
+
+- calcular suma para una cadena por defecto ('1,2,4,8') OK
+- calcular suma para cualquier cadena 
+- calcular suma de una cadena con un delimitador por defecto 
+- calcular suma de una cadena con multiples delimitadores 
+- calcular suma de una cadena ignorando numeros que sean mayores a mil
+- calcular suma de una cadena con un delimitador de cualquier longitud 
