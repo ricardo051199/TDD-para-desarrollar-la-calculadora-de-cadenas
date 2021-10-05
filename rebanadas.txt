@@ -4,5 +4,5 @@ calcularCadena(cadena, delimitador)
 - calcular suma para cualquier cadena OK
 - calcular suma de una cadena con un delimitador por defecto (';') OK
 - calcular suma de una cadena ignorando numeros que sean mayores a mil ok
-- calcular suma de una cadena con un delimitador de cualquier longitud 
+- calcular suma de una cadena con un delimitador de cualquier longitud OK
 - calcular suma de una cadena con multiples delimitadores
