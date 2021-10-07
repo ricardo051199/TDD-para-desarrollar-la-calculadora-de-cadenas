@@ -14,29 +14,19 @@ describe("sumar cadena ", () => {
   it("calcular suma de una cadena con un delimitador de cualquier longitud ", () => {
     expect(calcularCadena("1***2***3", "***")).toEqual(6);
   });
+  it("calcular suma de una cadena con multiples delimitadores", () => {
+    expect(calcularCadena("1*2%3,7-9", "['*', '%']")).toEqual(22);
+  });
 });
 
 function calcularCadena(cadena, delimitador) {
   let suma = 0, baseNumerico = 10;
-  if(delimitador){
-    cadena = cadena.split(delimitador)
-    for(var i = 0; i < cadena.length; i++){
-      suma = suma + parseInt(cadena[i], baseNumerico);
-    }
-  } 
-  
-  if(!delimitador) {
-    let subCadena = "";
-    let entero;
-    for(var i = 0; i <= cadena.length; i++){
-      if(parseInt(cadena[i], baseNumerico) || cadena[i] == 0){
-        subCadena = subCadena + cadena[i];
-      }else{
-        entero = parseInt(subCadena, baseNumerico);
-        if(entero <= 1000) suma = suma + entero;
-        subCadena = "";
-      }
-    }
+
+  if(delimitador) cadena = cadena.split(delimitador);
+  else cadena = cadena.split(/\W+/);
+
+  for(var i = 0; i < cadena.length; i++){
+    if(cadena[i] <= 1000) suma = suma + Number(cadena[i]);
   }
   
   return suma;
